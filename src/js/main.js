@@ -6,9 +6,10 @@ require.config({
         'handlebars': 'lib/handlebars-v4.0.11',
         'swiper': 'lib/swiper.min',
         'bscroll': 'lib/bscroll.min',
+        'text': 'lib/text',
 
         //编写的库
-        'handlebars': 'common/handlebars',
+        'render': 'common/render',
         'getRequest': 'common/getRequest',
 
         //app

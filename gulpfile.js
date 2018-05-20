@@ -1,8 +1,21 @@
 var gulp = require('gulp'),
     server = require('gulp-webserver'),
+    sass = require('gulp-sass'),
     mock = require('./src/mock/index');
 
-gulp.task('default', function() {
+
+gulp.task('sass', function() {
+    return gulp.src('src/sass/*.scss')
+        .pipe(sass())
+        .pipe(gulp.dest('src/css'));
+});
+
+gulp.task('watch', function() {
+    gulp.watch('src/sass/*.scss', ['sass']);
+});
+
+
+gulp.task('server', ['sass'], function() {
     gulp.src('src')
         .pipe(server({
             open: true,
@@ -16,3 +29,6 @@ gulp.task('default', function() {
             }
         }))
 })
+
+
+gulp.task('default', ['server', 'watch'])

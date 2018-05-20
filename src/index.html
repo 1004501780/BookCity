@@ -3,8 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="./js/lib/flexible.js"></script>
     <title>首页</title>
     <link rel="stylesheet" href="./css/swiper.min.css">
     <link rel="stylesheet" href="./css/index.css">
@@ -12,7 +11,87 @@
 
 <body>
     <div class="wrap">
-        首页
+        <header>
+            <span class="icon-sign"></span>
+            <div class="switch-tab">
+                <span class="tab-item active">书城</span>
+                <span class="tab-item">书架</span>
+                <div class="line"></div>
+            </div>
+            <span class="icon-person"></span>
+        </header>
+        <div class="content">
+            <div class="swiper-container city-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide city-scroll">
+                        <div up='上拉加载...' down='下拉刷新...' class="load-in">
+                            <section class="top-home">
+                                <div class="top-home_search">输入书名/作者/关键字</div>
+                                <div class="swiper-container home-scroll">
+                                    <div class="swiper-wrapper">
+                                        <script type="text/x-handlebars-template" id="slide-tpl">
+                                            {{#each data}}
+                                            <div class="swiper-slide">
+                                                <a href="{{id}}">
+                                                    <img src="{{ad_pic_url}}" alt="">
+                                                </a>
+                                            </div>
+                                            {{/each}}
+                                        </script>
+                                    </div>
+                                </div>
+                                <ul class="top-home_btn">
+                                    <li data-href="#" data-title="限免">
+                                        <img class="top-home_icon" src="http://image.read.duokan.com/mfsv2/download/s010/p015iBxwdkmU/5wc5uzYhLZ7iVa.png">
+                                        <p class="top-home_des">限免</p>
+                                    </li>
+                                    <li data-href="#" data-title="女生">
+                                        <img class="top-home_icon" src="http://image.read.duokan.com/mfsv2/download/s010/p01LWZmXGCpy/aSrSq6Llgt9PqE.png">
+                                        <p class="top-home_des">女生</p>
+                                    </li>
+                                    <li data-href="#" data-title="男生">
+                                        <img class="top-home_icon" src="http://image.read.duokan.com/mfsv2/download/fdsc3/p01NVfuCskSL/W9VPXMnDunLwGT.png">
+                                        <p class="top-home_des">男生</p>
+                                    </li>
+                                    <li data-href="#" data-title="分类">
+                                        <img class="top-home_icon" src="http://image.read.duokan.com/mfsv2/download/s010/p01pz5NtyRI0/2ENONnvOg23NXM.png">
+                                        <p class="top-home_des">分类</p>
+                                    </li>
+                                    <li data-href="#" data-title="排行">
+                                        <img class="top-home_icon" src="http://image.read.duokan.com/mfsv2/download/s010/p010kK7M5VyH/8kPz9nKvRXyu1k.png">
+                                        <p class="top-home_des">排行</p>
+                                    </li>
+                                </ul>
+                            </section>
+                            <section class="main-card">
+                                <div class="main-card_header">
+                                    <h2 class="main-card_title">本周最火</h2>
+                                </div>
+                                <ul class="book-table">
+                                    <script type="text/x-handlebars-template" id="slide-li">
+                                        {{#each data}}
+                                        <li data-track="0">
+                                            <div class="u-book">
+                                                <div class="book-cover">
+                                                    <img alt="{{title}}" src="{{cover}}">
+                                                </div>
+                                                <div class="info">
+                                                    <h3 class="title">{{title}}</h3>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        {{/each}}
+                                    </script>
+                                </ul>
+                            </section>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        书架
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 

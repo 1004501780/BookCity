@@ -1,0 +1,112 @@
+header {
+    width: 100%;
+    height: pxTorem(44px);
+    background-color: #efeff0;
+    border-bottom: 1px solid #ddd;
+    position: relative;
+    .icon-sign {
+        width: pxTorem(44px);
+        height: pxTorem(44px);
+        background: url("../../imgs/icon-sign.png") no-repeat center center;
+        background-size: pxTorem(22px);
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+    .icon-person {
+        width: pxTorem(44px);
+        height: pxTorem(44px);
+        background: url("../../imgs/icon-person.png") no-repeat center center;
+        background-size: pxTorem(22px);
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .switch-tab {
+        width: pxTorem(120px);
+        height: pxTorem(44px);
+        margin: 0 auto;
+        display: flex;
+        position: relative;
+        span {
+            width: pxTorem(60px);
+            height: pxTorem(44px);
+            text-align: center;
+            display: inline-block;
+            line-height: pxTorem(44px);
+            font-size: pxTorem(14px);
+            &.active {
+                color: orange;
+            }
+        }
+        .line {
+            width: pxTorem(60px);
+            position: absolute;
+            left: 0;
+            bottom: pxTorem(-1px);
+            transition: transform .5s;
+            &:before {
+                content: '';
+                width: pxTorem(34px);
+                height: pxTorem(2px);
+                margin: 0 auto;
+                background-color: orange;
+                display: block;
+            }
+            &.move {
+                transform: translateX(pxTorem(60px));
+            }
+        }
+    }
+    .icon-back {
+        width: pxTorem(44px);
+        height: pxTorem(44px);
+        background: url("../../imgs/icon-back.png") no-repeat center center;
+        background-size: pxTorem(22px);
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+    .search-wrap {
+        margin: 0 pxTorem(20px) 0 pxTorem(44px);
+        position: relative;
+        top: pxTorem(5px);
+        height: pxTorem(34px);
+        display: flex;
+        font-size: pxTorem(12px);
+        background-color: #fff;
+        .icon-search {
+            width: pxTorem(34px);
+            height: pxTorem(34px);
+            background: url("../../imgs/icon-search.png") no-repeat center center;
+            background-size: pxTorem(16px);
+            border-right: 1px solid #ddd;
+        }
+        .ipt {
+            flex: 1;
+            height: pxTorem(34px);
+            padding: 0 pxTorem(10px);
+            line-height: pxTorem(34px);
+        }
+        .search-btn {
+            width: pxTorem(44px);
+            height: pxTorem(34px);
+            line-height: pxTorem(34px);
+            text-align: center;
+            border-left: 1px solid #ccc;
+        }
+    }
+    .title {
+        margin-left: pxTorem(44px);
+        line-height: pxTorem(44px);
+    }
+    .icon-home {
+        width: pxTorem(44px);
+        height: pxTorem(44px);
+        background: url("../../imgs/icon-home.png") no-repeat center center;
+        background-size: pxTorem(16px);
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+}
