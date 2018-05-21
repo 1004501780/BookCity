@@ -155,4 +155,40 @@ body {
             }
         }
     }
+    .channel-group__footer {
+        display: block;
+        border-top: 1px solid #888;
+        text-align: center;
+        font-size: pxTorem(14px);
+        padding: pxTorem(10px) 0;
+        color: #333;
+        text-decoration: none;
+    }
+}
+
+.channel_tab {
+    position: relative;
+    border-bottom: 10px solid #f5f5f5;
+    background: #fff;
+    div.channel_header {
+        padding: pxTorem(15px) pxTorem(13px) pxTorem(14px) pxTorem(13px);
+        border-bottom: 1px solid #f0f0f0;
+        position: relative;
+        p.channel_title {
+            position: relative;
+            color: rgba(0, 0, 0, 0.9);
+            >i {
+                position: absolute;
+                margin: pxTorem(-1px) 0 0 pxTorem(5px);
+                padding: pxTorem(3px) pxTorem(5px) pxTorem(0px) pxTorem(5px);
+                color: #fff;
+                background: #53ac7d;
+                border-radius: 1px;
+            }
+        }
+    }
+    li {
+        padding: 17px 0;
+        border-bottom: 1px solid #f0f0f0;
+    }
 }
