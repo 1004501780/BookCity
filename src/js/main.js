@@ -11,8 +11,16 @@ require.config({
         //编写的库
         'render': 'common/render',
         'getRequest': 'common/getRequest',
+        'GetSlideDirection': 'common/slider-common',
 
         //app
-        'index': 'app/index'
+        'index': 'app/index',
+        'search': 'app/search',
+
+        //模板
+        "bookLr": '../page/tpl/book-l-r-list.html',
+        "bookLb": '../page/tpl/book-list.html',
+        "header": '../page/tpl/hander.html',
+        "bookLs": '../page/tpl/book-search.html',
     }
 });

@@ -1,5 +1,6 @@
 @import "_common.scss";
 @import "tpl/_header.scss";
+@import "tpl/_search.scss";
 html,
 body {
     width: 100%;
@@ -56,7 +57,7 @@ body {
 
 .top-home {
     background: #fff;
-    border-bottom: pxTorem(10px) solid #f5f5f5;
+    border-bottom: pxTorem(10px) solid #ddd;
     .top-home_search {
         margin: pxTorem(10px) pxTorem(13px);
         padding: pxTorem(8px) 0 pxTorem(8px) pxTorem(30px);
@@ -64,7 +65,7 @@ body {
         color: rgba(0, 0, 0, 0.4);
         background: url(http://image.read.duokan.com/mfsv2/download/fdsc3/p01dSYLeWtSR/tY73MgTfVw7UAS.png) no-repeat 8px center;
         background-size: pxTorem(14px);
-        border: 1px solid #f5f5f5;
+        border: 1px solid #ccc;
         border-radius: 2px;
     }
     .swiper-slide {
@@ -119,6 +120,7 @@ body {
         flex-flow: wrap;
         padding-bottom: pxTorem(10px);
         li {
+            margin-top: pxTorem(8px);
             width: 33.3%;
             margin-bottom: pxTorem(8px);
             text-align: center;
@@ -177,7 +179,9 @@ body {
         p.channel_title {
             position: relative;
             color: rgba(0, 0, 0, 0.9);
+            font-size: pxTorem(16px);
             >i {
+                font-size: pxTorem(12px);
                 position: absolute;
                 margin: pxTorem(-1px) 0 0 pxTorem(5px);
                 padding: pxTorem(3px) pxTorem(5px) pxTorem(0px) pxTorem(5px);
@@ -187,8 +191,241 @@ body {
             }
         }
     }
+    div.tab_bd {
+        overflow: hidden;
+        ul {
+            padding: 0 pxTorem(13px);
+            li {
+                padding: pxTorem(17px) 0;
+                border-bottom: 1px solid #ccc;
+                div.channel_list_book {
+                    overflow: hidden;
+                    div.channel_list_book_img {
+                        float: left;
+                        position: relative;
+                        width: pxTorem(85px);
+                        height: pxTorem(113px);
+                        background-color: #ccc;
+                        border: 1px solid #f0f0f0;
+                        border-radius: 1px;
+                        overflow: hidden;
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            border-radius: 1px;
+                        }
+                        div.channel_list_order {
+                            position: absolute;
+                            left: pxTorem(3px);
+                            top: 0;
+                            padding: pxTorem(5px) pxTorem(3px) 0 pxTorem(4px);
+                            height: pxTorem(17px);
+                            width: pxTorem(12px);
+                            color: #fff;
+                            background: #ffab18;
+                        }
+                    }
+                    div.channel_list_info {
+                        margin-left: pxTorem(100px);
+                        padding-top: pxTorem(6px);
+                        background: #fff;
+                        p.channel_list_title {
+                            margin-bottom: pxTorem(4px);
+                            color: rgba(0, 0, 0, 0.9);
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                        }
+                        p.channel_list_author {
+                            margin-top: pxTorem(8px);
+                            color: rgba(0, 0, 0, 0.7);
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                        }
+                        p.channel_list_summary {
+                            margin: pxTorem(8px) 0 0;
+                            height: pxTorem(30px);
+                            color: rgba(0, 0, 0, 0.6);
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                        }
+                        div.channel_list_wrap {
+                            margin-top: pxTorem(10px);
+                            padding-top: pxTorem(3px);
+                            overflow: hidden;
+                            div.channel_list_tag {
+                                float: left;
+                                margin-right: pxTorem(3px);
+                                padding: pxTorem(3px) pxTorem(6px) pxTorem(2px);
+                                color: #53ac7d;
+                                border-radius: 3px;
+                                border: 1px solid #53ac7d;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                white-space: nowrap;
+                            }
+                        }
+                    }
+                }
+                .channel_list_book_no-img {
+                    overflow: hidden;
+                    .channel_list_book_order {
+                        float: left;
+                        margin-top: 1px;
+                        color: rgba(237, 83, 15, 0.9);
+                    }
+                    .channel_list_book_info {
+                        margin-left: pxTorem(27px);
+                        .channel_list_book_title {
+                            position: relative;
+                            color: rgba(0, 0, 0, 0.9);
+                            background: #fff;
+                        }
+                        .channel_list_book_author {
+                            position: absolute;
+                            margin: pxTorem(1px) 0 0 pxTorem(13px);
+                            color: rgba(0, 0, 0, 0.4);
+                            background: #fff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.new-page {
+    background: #fff;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    .shelf_top {
+        padding: pxTorem(10px) pxTorem(20px) 0;
+        .shelf_switch {
+            width: pxTorem(36px);
+            height: pxTorem(36px);
+            float: right;
+            border-radius: 4px;
+            background: url(http://image.read.duokan.com/mfsv2/download/fdsc3/p01yLF3fEj8l/b7UfAdlfufQKML.png) no-repeat center;
+            background-size: pxTorem(16px);
+            border: 1px solid #ccc;
+        }
+        .shelf-search {
+            margin-right: pxTorem(46px);
+            font-size: pxTorem(12px);
+            color: #ccc;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            line-height: pxTorem(36px);
+            background: url(http://image.read.duokan.com/mfsv2/download/fdsc3/p01dSYLeWtSR/tY73MgTfVw7UAS.png) no-repeat 10px center;
+            background-size: pxTorem(14px);
+            padding-left: pxTorem(32px);
+        }
+    }
+    .book-list_row {
+        padding: pxTorem(13px) pxTorem(20px);
+        li {
+            border: none;
+            padding: 0;
+            margin-bottom: pxTorem(4px);
+            text-align: left;
+            width: 32.3%;
+            display: inline-block;
+            vertical-align: top;
+            line-height: 1;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+        .u-book {
+            position: relative;
+            overflow: hidden;
+            padding: 0;
+            a {
+                color: #333;
+                text-decoration: none;
+                .book-cover {
+                    margin: 0;
+                    float: none;
+                    width: pxTorem(90px);
+                    height: pxTorem(120px);
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+            .info {
+                width: pxTorem(84px);
+                padding-top: pxTorem(8px);
+                margin: 0;
+                text-align: left;
+                .title {
+                    width: 100%;
+                    font-size: pxTorem(12px);
+                    color: #666;
+                    font-weight: normal;
+                    -webkit-line-clamp: 2;
+                    -webkit-box-orient: vertical;
+                    white-space: inherit;
+                    height: pxTorem(32px);
+                }
+                .author {
+                    display: none;
+                }
+                .extra {
+                    display: none !important;
+                }
+            }
+        }
+    }
+}
+
+.book-list {
     li {
-        padding: 17px 0;
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
         border-bottom: 1px solid #f0f0f0;
+    }
+    .u-book {
+        position: relative;
+        overflow: hidden;
+        padding: pxTorem(13px) pxTorem(20px);
+        a {
+            color: #333;
+            text-decoration: none;
+            .book-cover {
+                margin: 0;
+                float: none;
+                width: pxTorem(90px);
+                height: pxTorem(120px);
+                float: left;
+                margin-right: pxTorem(10px);
+                position: relative;
+                box-shadow: 0px pxTorem(6px) pxTorem(5px) pxTorem(-3px) #aaa;
+                border: 1px solid #f0f0f0;
+                border-bottom: none;
+                overflow: hidden;
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+        .info {
+            .title {
+                margin-bottom: pxTorem(4px);
+                font-size: pxTorem(16px);
+                font-weight: 400;
+                color: #000;
+            }
+            .extra {
+                margin-top: pxTorem(4px);
+                font-size: pxTorem(12px);
+                color: #8d8d8d;
+            }
+        }
     }
 }

@@ -21,7 +21,9 @@ gulp.task('server', ['sass'], function() {
             open: true,
             post: 8080,
             middleware: function(req, res, next) {
+                req.url = decodeURI(req.url);
                 if (/\/api/g.test(req.url)) {
+                    res.setHeader("content-type", "text/json;charset=utf-8");
                     var data = mock(req.url);
                     res.end(JSON.stringify(data))
                 }

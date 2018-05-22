@@ -11,17 +11,31 @@
 
 <body>
     <div class="wrap">
-        <header>
-            <span class="icon-back"></span>
-            <div class="search-wrap">
-                <span class="icon-search"></span>
-                <input type="text" class="ipt" placeholder="请输入搜索关键字">
-                <span class="search-btn">搜索</span>
+        <header id='render-header'></header>
+        <div id="Tag" class="top_bd">
+            <div id="Tags">
+                <ul class="m-tag -color search-tag">
+                    <li class="u-tag">如果蜗牛有爱情</li>
+                    <li class="u-tag">择天记</li>
+                    <li class="u-tag">一夜弃妃</li>
+                    <li class="u-tag">诛仙</li>
+                    <li class="u-tag">豪门小老婆</li>
+                    <li class="u-tag">异能小农民</li>
+                    <li class="u-tag">武动乾坤</li>
+                    <li class="u-tag">别那么骄傲</li>
+                </ul>
             </div>
-            <!--<span class="title">搜索title</span>
-            <span class="icon-home"></span>-->
-        </header>
+            <div id="Tags2">
+                <ul class="book-list"></ul>
+            </div>
+        </div>
     </div>
 </body>
+<script src="../js/lib/require.js"></script>
+<script>
+    require(['../js/main.js'], function() {
+        require(['search'])
+    })
+</script>
 
 </html>

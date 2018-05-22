@@ -26,7 +26,9 @@
                     <div class="swiper-slide city-scroll">
                         <div up='上拉加载...' down='下拉刷新...' class="load-in">
                             <section class="top-home">
-                                <div class="top-home_search">输入书名/作者/关键字</div>
+                                <a href="./page/search.html">
+                                    <div class="top-home_search">输入书名/作者/关键字</div>
+                                </a>
                                 <div class="swiper-container home-scroll">
                                     <div class="swiper-wrapper">
                                         <script type="text/x-handlebars-template" id="slide-tpl">
@@ -90,62 +92,43 @@
                                     <p class="channel_title">重磅推荐<i>推</i></p>
                                 </div>
                                 <div class="tab_bd">
-                                    <ul class="list-h5">
-                                        <li>
-                                            <div class="book-h5" data-href="#page=book&amp;source_id=271019&amp;source=2" da="index.2.b.0*2_271019" expose="">
-                                                <div class="book-h5__cover Lazy_loading Lazy_loaded" data-id="271019" id="Tag__11"><img alt="我的绝美女神老婆" src="http://cover.read.duokan.com/mfsv2/download/fdsc3/p01W18eqGFfh/LgKEIErAOki8Qm.jpg!s">
-                                                    <div class="u-tagRT"></div>
-                                                    <p class="book-h5__finish">完结</p>
-                                                    <div class="book-h5__order">1</div>
-                                                </div>
-                                                <div class="book-h5__info">
-                                                    <p class="book-h5__title">我的绝美女神老婆</p>
-                                                    <p class="book-h5__author"><span class="author">一笔烟云</span></p>
-                                                    <p class="book-h5__summary">身怀绝技的方少阳，带着对大都市的美好憧憬，本想投靠师娘，却当上了医院妇科的男医生，泡了个美女医生，误...</p>
-                                                    <div class="book-h5__wrap">
-                                                        <div class="book-h5__tag">都市情缘</div>
-                                                        <div class="book-h5__tag">热血都市</div>
-                                                        <div class="book-h5__tag">506万字</div>
-                                                        <!--<p class="book-h5__latest">完结</p>-->
+                                    <ul class="channel_list" id="channel_list">
+                                        <script type="text/x-handlebars-template" id="recommed-list-tpl">
+                                            {{#each this}} {{#if (limit @index)}}
+                                            <li>
+                                                <div class="channel_list_book_no-img">
+                                                    <span class="channel_list_book_order">{{addInd2 @index}}</span>
+                                                    <div class="channel_list_book_info">
+                                                        <p class="channel_list_book_title">{{title}}
+                                                            <i class="channel_list_book_author">
+                                                                <span class="author">{{author}}</span>
+                                                            </i>
+                                                        </p>
                                                     </div>
                                                 </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="book-h5 book-h5_no-img" data-href="#page=book&amp;source_id=270754&amp;source=2" da="index.2.b.1*2_270754" expose=""><span class="book-h5_no-img__order">02</span>
-                                                <div class="book-h5_no-img__info">
-                                                    <p class="book-h5_no-img__title">异能狂徒在校园<i class="book-h5_no-img__author"><span class="author">三寸烟火</span></i></p>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="book-h5 book-h5_no-img" data-href="#page=book&amp;source_id=42019&amp;source=2" da="index.2.b.2*2_42019" expose=""><span class="book-h5_no-img__order">03</span>
-                                                <div class="book-h5_no-img__info">
-                                                    <p class="book-h5_no-img__title">鬼吹灯（盗墓者的经历）<i class="book-h5_no-img__author"><span class="author">本物天下霸唱</span></i></p>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="book-h5 book-h5_no-img" data-href="#page=book&amp;source_id=30064&amp;source=2" da="index.2.b.3*2_30064" expose=""><span class="book-h5_no-img__order">04</span>
-                                                <div class="book-h5_no-img__info">
-                                                    <p class="book-h5_no-img__title">兵王之王<i class="book-h5_no-img__author"><span class="author">七品</span></i></p>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="book-h5 book-h5_no-img" data-href="#page=book&amp;source_id=282109&amp;source=2" da="index.2.b.4*2_282109" expose=""><span class="book-h5_no-img__order">05</span>
-                                                <div class="book-h5_no-img__info">
-                                                    <p class="book-h5_no-img__title">都市武圣<i class="book-h5_no-img__author"><span class="author">河帅</span></i></p>
-                                                </div>
-                                            </div>
-                                        </li>
+                                            </li>
+                                            {{/if}} {{/each}}
+                                        </script>
                                     </ul>
+                                </div>
+                            </section>
+                            <section class="channel_tab">
+                                <div class="tab_bd">
+                                    <ul class="channel_list" id="channel_list_main"></ul>
                                 </div>
                             </section>
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        书架
+                        <div class="new-page shelf">
+                            <div class="shelf_top">
+                                <div class="shelf_switch"></div>
+                                <a href="./page/search.html">
+                                    <div class="shelf-search">输入书名/作者/关键字</div>
+                                </a>
+                            </div>
+                            <ul class="book-list" id="book-list_b"></ul>
+                        </div>
                     </div>
                 </div>
             </div>

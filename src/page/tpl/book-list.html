@@ -1,0 +1,21 @@
+<script type="text/x-handlebars-template" id="book-list">
+    {{#each this}}
+    <li>
+        <div class="u-book">
+            <a>
+                <div class="book-cover">
+                    <img alt="{{title}}" src="{{cover}}">
+                </div>
+            </a>
+            <div class="info">
+                <h3 class="title">{{title}}</h3>
+                <p class="author"><span class="author">{{authors}}</span></p>
+                <p class="extra">已读: 第1章 借你纽扣一用</p>
+                <div class="wraps">
+                    <p class="extra">最新: {{latest}}</p>
+                </div>
+            </div>
+        </div>
+    </li>
+    {{/each}}
+</script>
