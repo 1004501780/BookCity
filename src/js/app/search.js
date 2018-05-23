@@ -1,7 +1,7 @@
 require(['jquery', 'render', 'swiper', 'bscroll', 'text!header', 'text!bookLs'], function($, render, swiper, BScroll, HEader, bookLs) {
     $("body").append(HEader);
     $("body").append(bookLs);
-    render({ isSearch: true }, $('#header-tpl'), $('#render-header'));
+    render({ isSearch: true, title: "搜索" }, $('#header-tpl'), $('#render-header'));
     $('.icon-back').on('click', function() {
         history.go(-1);
     })

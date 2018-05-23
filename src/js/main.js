@@ -16,6 +16,7 @@ require.config({
         //app
         'index': 'app/index',
         'search': 'app/search',
+        'detail': 'app/detail',
 
         //模板
         "bookLr": '../page/tpl/book-l-r-list.html',

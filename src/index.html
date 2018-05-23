@@ -73,14 +73,16 @@
                                     <script type="text/x-handlebars-template" id="slide-li">
                                         {{#each data}}
                                         <li data-track="0">
-                                            <div class="u-book">
-                                                <div class="book-cover">
-                                                    <img alt="{{title}}" src="{{cover}}">
+                                            <a href="./page/detail.html?fiction_id={{fiction_id}}">
+                                                <div class="u-book">
+                                                    <div class="book-cover">
+                                                        <img alt="{{title}}" src="{{cover}}">
+                                                    </div>
+                                                    <div class="info">
+                                                        <h3 class="title">{{title}}</h3>
+                                                    </div>
                                                 </div>
-                                                <div class="info">
-                                                    <h3 class="title">{{title}}</h3>
-                                                </div>
-                                            </div>
+                                            </a>
                                         </li>
                                         {{/each}}
                                     </script>

@@ -1,6 +1,7 @@
 @import "_common.scss";
 @import "tpl/_header.scss";
 @import "tpl/_search.scss";
+@import "tpl/_detail.scss";
 html,
 body {
     width: 100%;
@@ -308,7 +309,7 @@ body {
             float: right;
             border-radius: 4px;
             background: url(http://image.read.duokan.com/mfsv2/download/fdsc3/p01yLF3fEj8l/b7UfAdlfufQKML.png) no-repeat center;
-            background-size: pxTorem(16px);
+            background-size: pxTorem(16px) !important;
             border: 1px solid #ccc;
         }
         .shelf-search {
