@@ -1,7 +1,11 @@
 @import "_common.scss";
+@import "_config.scss";
+@import "_mixin.scss";
 @import "tpl/_header.scss";
 @import "tpl/_search.scss";
 @import "tpl/_detail.scss";
+@import "tpl/_bookhot.scss";
+@import "tpl/_section.scss";
 html,
 body {
     width: 100%;

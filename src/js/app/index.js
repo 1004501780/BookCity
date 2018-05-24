@@ -167,9 +167,9 @@ require(['jquery', 'render', 'swiper', 'bscroll', 'text!bookLr', 'text!bookLb', 
             $('.shelf_switch').on('click', function() {
                 $('#book-list_b').toggleClass('book-list_row');
                 if ($('#book-list_b')[0].className === 'book-list') {
-                    $(this).css('background', "url(http://image.read.duokan.com/mfsv2/download/fdsc3/p014nDc0lHYW/lDeZ3lL4nmgnmf.png) no-repeat center")
-                } else {
                     $(this).css('background', "url(http://image.read.duokan.com/mfsv2/download/fdsc3/p01yLF3fEj8l/b7UfAdlfufQKML.png) no-repeat center")
+                } else {
+                    $(this).css('background', "url(http://image.read.duokan.com/mfsv2/download/fdsc3/p014nDc0lHYW/lDeZ3lL4nmgnmf.png) no-repeat center")
                 }
             })
         },

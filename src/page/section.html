@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="../js/lib/flexible.js"></script>
+    <title>目录</title>
+    <link rel="stylesheet" href="../css/index.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <header id='render-header'></header>
+        <div class="top_bd chapter-wrap">
+            <ul class="fiction-toc">
+                <script type="text/x-handlebars-template" id="fiction_toc">
+                    {{#each item.toc}}
+                    <li class="fiction-toc_item" data-id="0">
+                        <p>{{this.title}}</p>
+                    </li>
+                    {{/each}}
+                </script>
+            </ul>
+        </div>
+    </div>
+</body>
+<script src="../js/lib/require.js"></script>
+<script>
+    require(['../js/main.js'], function() {
+        require(['section'])
+    })
+</script>
+
+</html>

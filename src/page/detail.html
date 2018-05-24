@@ -12,7 +12,7 @@
     <div class="wrap">
         <header id='render-header'></header>
         <script type="text/x-handlebars-template" id='detailD'>
-            <div class="top_bd">
+            <div class="top_bd none">
                 <div class="new-page book-page">
                     <section class="main-card">
                         <div class="u-books">
@@ -48,9 +48,11 @@
                         </div>
                         <div class="u-folders">
                             <div class="folder-cnt">{{item.content}}</div>
-                            <div class="folder-tail">
-                                <div>{{item.latest}}</div>
-                            </div>
+                            <a href="./section.html?fiction_id={{item.fiction_id}}">
+                                <div class="folder-tail">
+                                    <div>{{item.latest}}</div>
+                                </div>
+                            </a>
                         </div>
                     </section>
                     <section class="main-card">

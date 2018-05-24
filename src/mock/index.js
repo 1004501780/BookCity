@@ -13,6 +13,16 @@ var detail301342 = require('./data/details/301342.json');
 var detail42318 = require('./data/details/42318.json');
 var detail30047 = require('./data/details/30047.json');
 var detail315972 = require('./data/details/315972.json');
+//目录数据
+var section352876 = require('./data/sections/s352876.json');
+var section306643 = require('./data/sections/s306643.json');
+var section42318 = require('./data/sections/s42318.json');
+var section315972 = require('./data/sections/s315972.json');
+//获取页面数据
+var artical_1 = require('./data/artical/data1.json');
+var artical_2 = require('./data/artical/data2.json');
+var artical_3 = require('./data/artical/data3.json');
+var artical_4 = require('./data/artical/data4.json');
 
 var jsonObj = {
     "/api/index": homeJson,
@@ -29,8 +39,17 @@ var jsonObj = {
     '/api/detailNum?id=301342': detail301342,
     '/api/detailNum?id=42318': detail42318,
     '/api/detailNum?id=30047': detail30047,
-    '/api/detailNum?id=315972': detail315972
-
+    '/api/detailNum?id=315972': detail315972,
+    //目录数据
+    '/api/sectionNum?id=352876': section352876,
+    '/api/sectionNum?id=306643': section306643,
+    '/api/sectionNum?id=42318': section42318,
+    '/api/sectionNum?id=315972': section315972,
+    //单章渲染
+    '/api/articals?fiction_id=352876&chapter_id=1': artical_1,
+    '/api/articals?fiction_id=352876&chapter_id=2': artical_2,
+    '/api/articals?fiction_id=352876&chapter_id=3': artical_3,
+    '/api/articals?fiction_id=352876&chapter_id=4': artical_4
 }
 module.exports = function(url) {
     if (jsonObj[url]) {

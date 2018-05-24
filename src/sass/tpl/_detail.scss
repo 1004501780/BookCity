@@ -167,13 +167,19 @@
         font-size: pxTorem(14px);
         color: #585858;
     }
-    .folder-tail {
-        text-align: center;
-        font-size: pxTorem(14px);
-        border-top: 1px solid #f0f0f0;
-        color: #8d8d8d;
-        div {
-            padding: pxTorem(10px) pxTorem(14px);
+    a {
+        .folder-tail {
+            text-align: center;
+            font-size: pxTorem(14px);
+            border-top: 1px solid #f0f0f0;
+            color: #8d8d8d;
+            div {
+                padding: pxTorem(10px) pxTorem(14px);
+            }
         }
     }
+}
+
+.none {
+    display: none;
 }

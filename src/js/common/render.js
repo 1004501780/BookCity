@@ -1,5 +1,6 @@
 define(['jquery', 'handlebars'], function($, handle) {
     function render(data, source, target, isRefresh) {
+
         var sourceTpl = source.html();
 
         var template = handle.compile(sourceTpl);
@@ -28,13 +29,14 @@ define(['jquery', 'handlebars'], function($, handle) {
             }
         })
 
-        var html = template(data)
+        var html = template(data);
+
+
         if (isRefresh) {
             target.html(html)
         } else {
             target.append(html)
         }
-
     }
     return render
 })

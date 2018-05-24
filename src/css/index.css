@@ -167,6 +167,43 @@ textarea {
 html {
   font-size: 37.5px; }
 
+.none {
+  display: none; }
+
+/*字体大小*/
+/*灰色字体颜色*/
+/*白色字体*/
+/*黑色字体*/
+/*按钮灰色边框*/
+/*蓝色边框颜色*/
+/*蓝色字体颜色*/
+/*group 底部边框颜色*/
+/*header背景*/
+/*搜索框border颜色*/
+/*banner buttle*/
+/*orange line颜色*/
+/*line bottom颜色*/
+/* 书背景*/
+/* 书边框颜色 */
+/*书的阴影*/
+/*绿色标签颜色*/
+/*限免tag背景*/
+/*按钮背景颜色*/
+/*按钮border颜色*/
+/*标签背景*/
+/*标签背景色*/
+/*详情界面*/
+/* 阅读界面 */
+/*阅读界面标题*/
+/*超过几行显示省略号*/
+/*背景*/
+/* 滚动 */
+/*html {
+    font-size: $browser-default-font-size;
+}*/
+html {
+  font-size: 37.5px; }
+
 header {
   width: 100%;
   height: 1.17333rem;
@@ -447,13 +484,38 @@ header {
     margin-bottom: 0.26667rem;
     font-size: 0.37333rem;
     color: #585858; }
-  .u-folders .folder-tail {
+  .u-folders a .folder-tail {
     text-align: center;
     font-size: 0.37333rem;
     border-top: 1px solid #f0f0f0;
     color: #8d8d8d; }
-    .u-folders .folder-tail div {
+    .u-folders a .folder-tail div {
       padding: 0.26667rem 0.37333rem; }
+
+.none {
+  display: none; }
+
+.hot_tab {
+  overflow: auto; }
+
+.nones {
+  display: none; }
+
+.top_bd {
+  top: 1.06667rem;
+  overflow: auto;
+  margin-top: 0.26667rem; }
+  .top_bd .fiction-toc .fiction-toc_item {
+    line-height: 3;
+    padding: 0 0.37333rem;
+    border-bottom: 1px solid #EEE;
+    font-size: 0.42667rem; }
+    .top_bd .fiction-toc .fiction-toc_item p {
+      padding: 0;
+      margin: 0; }
+
+.colors {
+  color: #F35D02; }
 
 html,
 body {
