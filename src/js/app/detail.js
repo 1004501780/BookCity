@@ -16,7 +16,9 @@ require(['jquery', 'render', 'text!header', 'getRequest'], function($, render, H
             $('.icon-back').on('click', function() {
                 history.go(-1);
             })
-
+            $('.icon-home').on('click', function() {
+                window.location.href = 'http://localhost:8000/'
+            });
             //点击开始阅读
             $('.book-dash-text').on('click', function() {
                 window.location.href = `../../page/artical.html?id=${Id.fiction_id}`;

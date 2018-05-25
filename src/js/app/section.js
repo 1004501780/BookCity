@@ -24,6 +24,9 @@ require(['jquery', 'render', 'text!header', 'getRequest', 'bscroll'], function($
             $('.icon-back').on('click', function() {
                 history.go(-1);
             })
+            $('.icon-home').on('click', function() {
+                window.location.href = 'http://localhost:8000/'
+            })
         },
         error: function(err) {
             console.warn(err);

@@ -53,7 +53,8 @@ require(['jquery', 'render', 'storage', 'getRequest', 'base64', 'jsonp'], functi
                     cache: true,
                     success: function(data) {
                         var articalCon = JSON.parse($.base64.atob(data, true));
-                        render(articalCon, $('#artical'), $('.artical-con'), true)
+                        render(articalCon, $('#artical'), $('.artical-con'), true);
+                        $('.artical-con').scrollTop(0)
                     }
                 })
             },

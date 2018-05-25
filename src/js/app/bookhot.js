@@ -9,6 +9,9 @@ require(['jquery', 'render', 'text!header', 'getRequest', 'text!bookLr'], functi
             $('.icon-back').on('click', function() {
                 history.go(-1);
             })
+            $('.icon-home').on('click', function() {
+                window.location.href = 'http://localhost:8000/'
+            })
             render(res.items, $("#l-r-tpl"), $("#channel_list_main"));
             $('.nones').show();
         },
