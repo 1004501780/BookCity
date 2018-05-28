@@ -1,0 +1,32 @@
+@import "_common.scss";
+@import "_config.scss";
+@import "_mixin.scss";
+.wrap {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    h1 {
+        font-size: pxTorem(30px);
+        color: $btn-orange-bg;
+        margin: pxTorem(50px) 0;
+        text-align: center;
+    }
+    input {
+        display: block;
+        width: 80%;
+        margin: pxTorem(20px) auto;
+        padding: pxTorem(10px) pxTorem(10px);
+        border: 1px solid gray;
+        border-radius: pxTorem(10px);
+    }
+    button {
+        width: 60%;
+        height: pxTorem(44px);
+        background-color: $btn-orange-bg;
+        color: #fff;
+        font-size: pxTorem(16px);
+        border: none;
+        display: block;
+        margin: pxTorem(20px) auto;
+    }
+}

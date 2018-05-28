@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="../js/lib/flexible.js"></script>
+    <title>本周最火</title>
+    <link rel="stylesheet" href="../css/index-99bbc0fccb.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <header id='render-header'></header>
+        <section class="channel_tab hot_tab nones">
+            <div class="tab_bd">
+                <ul class="channel_list" id="channel_list_main"></ul>
+            </div>
+        </section>
+    </div>
+</body>
+<script src="../js/lib/require.js"></script>
+<script>
+    require(['../js/main.js'], function() {
+        require(['bookhot'])
+    })
+</script>
+
+</html>

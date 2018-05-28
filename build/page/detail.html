@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="../js/lib/flexible.js"></script>
+    <title>详情</title>
+    <link rel="stylesheet" href="../css/index-99bbc0fccb.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <header id='render-header'></header>
+        <script type="text/x-handlebars-template" id='detailD'>
+            <div class="top_bd none">
+                <div class="new-page book-page">
+                    <section class="main-card">
+                        <div class="u-books">
+                            <div class="book-cover">
+                                <img alt="{{item.title}}" src="{{item.cover}}">
+                            </div>
+                            <div class="info">
+                                <h3 class="title">{{item.title}}</h3>
+                                <p class="author"><span class="author">{{item.authors}}</span></p>
+                                <div class="u-grade">
+                                    <div class="grade grade8"></div><span class="read">{{item.click}}次点击</span></div>
+                                <p class="price">价格：{{item.price}}书币/千字</p>
+                                <p class="count">字数：{{item.word_count}}字 {{#if item.finish}}
+                                    <span class="u-booktag -serial">完结</span></p>
+                                {{else}}
+                                <span class="u-booktag -serial">连载中</span></p>
+                                {{/if}}
+                            </div>
+                        </div>
+                    </section>
+                    <section class="main-card" style="margin-top:-12px">
+                        <div class="book-dash">
+                            <div class="wrap">
+                                <ul class="btn-group">
+                                    <li class="u-btn2">
+                                        <span class="book-dash-text"></span>
+                                    </li>
+                                    <li class="u-btn3">
+                                        <a>下载</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="u-folders">
+                            <div class="folder-cnt">{{item.content}}</div>
+                            <a href="./section.html?fiction_id={{item.fiction_id}}">
+                                <div class="folder-tail">
+                                    <div>{{item.latest}}</div>
+                                </div>
+                            </a>
+                        </div>
+                    </section>
+                    <section class="main-card">
+                        <div class="u-folder">
+                            <div class="u-title">
+                                <h1 style="font-weight: 700">类别标签</h1>
+                            </div>
+                            <div id="Tags">
+                                <ul class="m-tag -color search-tag">
+                                    {{#each item.tags}}
+                                    <li class="u-tag">{{this}}</li>
+                                    {{/each}}
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="main-card">
+                        <div class="u-title">
+                            <h1>作者其它图书</h1>
+                        </div>
+                        <div class="cnt">
+                            <ul class="book-table">
+                                {{#each author_books}}
+                                <li data-track="0">
+                                    <div class="u-book">
+                                        <div class="book-cover">
+                                            <img alt="{{this.title}}" src="{{this.cover}}">
+                                        </div>
+                                        <div class="info">
+                                            <h3 class="title">{{this.title}}</h3>
+                                        </div>
+                                    </div>
+                                </li>
+                                {{/each}}
+                            </ul>
+                        </div>
+                    </section>
+                    <section class="main-card">
+                        <div class="u-title">
+                            <h1>图书信息</h1>
+                        </div>
+                        <div class="cnt">
+                            <ul class="text">
+                                <li>版权：阅文集团旗下起点中文网</li>
+                            </ul>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </script>
+    </div>
+</body>
+<script src="../js/lib/require.js"></script>
+<script>
+    require(['../js/main.js'], function() {
+        require(['detail'])
+    })
+</script>
+
+</html>

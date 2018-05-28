@@ -1,0 +1,22 @@
+<script type="text/x-handlebars-template" id="l-r-tpl">
+    {{#each this}}
+    <li>
+        <div class="channel_list_book">
+            <div class="channel_list_book_img">
+                <img alt="{{title}}" src="{{cover}}"> {{#if isShowNum}}
+                <div class="channel_list_order">{{addInd1 @index}}</div>{{/if}}
+            </div>
+            <div class="channel_list_info">
+                <p class="channel_list_title">{{title}}</p>
+                <p class="channel_list_author"><span class="author">{{authors}}</span></p>
+                <p class="channel_list_summary">{{summary}}</p>
+                <div class="channel_list_wrap">
+                    {{#each tags}}
+                    <div class="channel_list_tag">{{this}}</div>
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+    </li>
+    {{/each}}
+</script>
